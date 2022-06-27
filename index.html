@@ -94,7 +94,7 @@
                         <a href = "#" class = "btn btn-white">Saber más</a>
                         -->    
                           
-                        <a href="cita.html" target="_blank" class = "btn btn-light-blue">Reserva una cita</a>
+                        <a onclick="" href="cita.html" target="_blank" class = "btn btn-light-blue btn-cita">Reserva una cita</a>
                         <!--href = "https://api.whatsapp.com/send?phone=+584147819738&text=Hola%20Quiero%20hacer%20una%20cita%20."
                         -->
                     </div>
@@ -366,18 +366,19 @@
                 </div>
                 <div class = "contact-right text-white text-center bg-blue">
                     <div class = "contact-head">
-                        <h3 class = "lead">Contactanos</h3>
+                        <h3 class = "lead">Contáctanos</h3>
                         <p class = "text text-md">Puede comunicarse directamente para información</p>
                     </div>
-                    <form>
+                    <form action="https://formspree.io/f/mjvldpdg"
+                    method="POST">
                         <div class = "form-element">
-                            <input type = "text" class = "form-control" placeholder="Nombre completo">
+                            <input type = "text" class = "form-control" placeholder="Nombre completo" name="name">
                         </div>
                         <div class = "form-element">
-                            <input type = "email" class = "form-control" placeholder="Correo">
+                            <input type = "email" class = "form-control" placeholder="Correo" name="email">
                         </div>
                         <div class = "form-element">
-                            <textarea rows = "5" placeholder="Escriba su mensaje..." class = "form-control"></textarea>
+                            <textarea rows = "5" placeholder="Escriba su mensaje..." class = "form-control" name="message"></textarea>
                         </div>
                         <button type = "submit" class = "btn btn-white btn-submit">
                             <i class = "fas fa-arrow-right"></i>Enviar mensaje
@@ -401,7 +402,7 @@
                     <p class = "text text-md">Unidad de Medicina Fisica y Rehabilitación</p>
                     <address>
                         Edif. Centro Medico Anzoátegui <br>
-                        Piso 1 Consultorio N° X <br>
+                        Piso 1 Modulo B <br>
                         Lechería - Edo, Anzoátegui <br>
                         Venezuela
                     </address>
@@ -424,7 +425,7 @@
                         <li><a href = "#" class = "text-white">Our Plan</a></li>
                         -->
                         <li><a href = "#" class = "text-white">Nuestros Doctores</a></li>
-                        <li><a href = "#" class = "text-white">Has una cita</a></li>
+                        <li><a href = "cita.html" class = "text-white">Has una cita</a></li>
                     </ul>
                 </div>
 
@@ -432,9 +433,8 @@
                     <h3 class = "footer-head">Horarios</h3>
                     <p class = "text text-md">Puede acercarse a nuestro Consultorio dentro del siguiente horario:</p>
                     <ul class = "appointment-info">
-                        <li>8:00 AM - 11:00 AM</li>
-                        <li>2:00 PM - 05:00 PM</li>
-                        <li>8:00 PM - 11:00 PM</li>
+                        <li>8:00 AM - 12:00 AM</li>
+                        <li>1:30 PM - 05:00 PM</li>
                         <li>
                             <i class = "fas fa-envelope"></i>
                             <span><a href="mailto:removedic@gmail.com" class="text-white">esperando@correo</a>
