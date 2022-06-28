@@ -757,7 +757,7 @@ button[class ^= navbar]:hover{
 
 
 /* Media Queries */
-@media(min-width: 350px){
+@media(min-width: 375px){
     .py{
         padding: 120px 5px 120px 5px
     }
