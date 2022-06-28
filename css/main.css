@@ -62,6 +62,9 @@ a{
     border: none;
     cursor: pointer;
 }
+.btn, button:hover{
+   color: #16c5ff;
+}
 .btn{
     padding: .9rem 4rem;
     border-radius: 3rem;
@@ -151,7 +154,7 @@ h1, h2, h3{
     font-size: 1.3rem;
 }
 .py{
-    padding: 11.9rem;
+    padding: 120px 5px 120px 5px
 }
 .text-center{
     text-align: center;
@@ -732,7 +735,7 @@ button[class ^= navbar]:hover{
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
+	bottom:80px;
 	right:40px;
 	background-color:#25d366;
 	color:#FFF;
@@ -755,6 +758,9 @@ button[class ^= navbar]:hover{
 
 /* Media Queries */
 @media(min-width: 450px){
+    .py{
+        padding: 120px 5px 120px 5px
+    }
     .navbar-collapse{
         
         background-color: #2e2b38;
