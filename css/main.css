@@ -236,6 +236,7 @@ button[class ^= navbar]:hover{
 .nav-item{
     margin: 1.4rem 0;
 }
+
 .nav-link{
     opacity: 0.8;
     font-weight: 600;
