@@ -1093,18 +1093,13 @@ button[class ^= navbar]:hover{
     display: grid;
     gap: 1.5rem;
   }
-  
+    
 }
 
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-
-  
-
-  
-
 
 .nav__link{
     display: flex;
@@ -1119,12 +1114,8 @@ button[class ^= navbar]:hover{
     color: var(--first-color);
   }
 
-
 .nav__logo,
-.nav__toggle{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
+
 
 .nav__logo:hover{
   color: var(--first-color);
@@ -1137,4 +1128,8 @@ button[class ^= navbar]:hover{
 
 .nav__toggle:hover{
   color: var(--first-color);
+}
+
+.show-menu{
+    bottom: 0;
 }
