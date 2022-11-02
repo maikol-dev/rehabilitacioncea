@@ -837,6 +837,9 @@ button[class ^= navbar]:hover{
     .header-inner{
         padding-top: 3.2rem;
     }
+    .nav__list{
+        display: none;
+    }
     .header-inner .container{
         grid-template-columns: 545px auto;
         -webkit-box-align: center;
@@ -934,7 +937,7 @@ button[class ^= navbar]:hover{
 }
 
 @media(min-width: 1200px){
-    .navbar-show-btn, .navbar-hide-btn{
+    .navbar-show-btn, .navbar-hide-btn, .nav__btns{
         display: none;
     }
     
@@ -1064,6 +1067,7 @@ button[class ^= navbar]:hover{
     .container{
         max-width: 81vw;
     }
+    
 }
 
 /* transition and animation stopper */
@@ -1093,7 +1097,9 @@ button[class ^= navbar]:hover{
     display: grid;
     gap: 1.5rem;
   }
-    
+    .nav__list{
+        display: none;
+    }
 }
 
 .nav__list{
