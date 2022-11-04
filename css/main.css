@@ -801,7 +801,7 @@ button[class ^= navbar]:hover{
 
 @media(min-width: 768px){
     .header-inner-left h1{
-        font-size: 5.7rem;
+        font-size: 3.7rem;
     }
     .services-inner, .doc-panel-inner{
         grid-template-columns: repeat(2, 1fr);
@@ -834,11 +834,74 @@ button[class ^= navbar]:hover{
 }
 
 @media(min-width: 992px){
+    .navbar-show-btn, .navbar-hide-btn, .nav__btns, .nav__close, .nav__icon{
+        display: none;
+    }
+    .navbar-collapse{
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .navbar-nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .nav-item{
+        margin: 0;
+        margin-left: 3.5rem;
+    }
+    .nav-link{
+        color: var(--light-color);
+        opacity: 1;
+        font-weight: 500;
+        position: relative;
+    }
+    .nav-link::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: var(--light-color);
+        opacity: 0;
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
+        transition: var(--transition);
+    }
+    .nav-link:hover{
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        color: var(--light-color);
+    }
+    .nav-link:hover::after{
+        opacity: 1;
+        width: 100%;
+    }
     .header-inner{
         padding-top: 3.2rem;
-    }
-    .nav__list{
-        display: none;
     }
     .header-inner .container{
         grid-template-columns: 545px auto;
@@ -934,13 +997,13 @@ button[class ^= navbar]:hover{
            -moz-column-gap: 2.4rem;
                 column-gap: 2.4rem;
     }
+    
 }
 
 @media(min-width: 1200px){
     .navbar-show-btn, .navbar-hide-btn, .nav__btns{
         display: none;
     }
-    
     .navbar-collapse{
         -webkit-transform: translateX(0);
             -ms-transform: translateX(0);
@@ -1070,18 +1133,7 @@ button[class ^= navbar]:hover{
     
 }
 
-/* transition and animation stopper */
-.resize-animation-stopper *{
-    -webkit-animation: none!important;
-            animation: none!important;
-    -webkit-transition: none!important;
-    -o-transition: none!important;
-    transition: none!important;
-}
-
-/*==================== NAV ====================*/
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
     .nav__menu{
       position: fixed;
       bottom: -100%;
@@ -1097,10 +1149,20 @@ button[class ^= navbar]:hover{
     display: grid;
     gap: 1.5rem;
   }
-    .nav__list{
-        display: none;
-    }
 }
+
+/* transition and animation stopper */
+.resize-animation-stopper *{
+    -webkit-animation: none!important;
+            animation: none!important;
+    -webkit-transition: none!important;
+    -o-transition: none!important;
+    transition: none!important;
+}
+
+/*==================== NAV ====================*/
+
+
 
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
@@ -1128,14 +1190,20 @@ button[class ^= navbar]:hover{
 }
 
 .nav__toggle{
-  font-size: 1.1rem;
+  font-size: 3.1rem;
   cursor: pointer;
 }
 
 .nav__toggle:hover{
   color: var(--first-color);
 }
-
+.nav__close{
+    font-size: 3.1rem;
+    color: red;
+}
+.nav__menu{
+    padding: 0;
+}
 .show-menu{
     bottom: 0;
 }
