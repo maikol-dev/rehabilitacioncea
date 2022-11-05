@@ -1130,10 +1130,14 @@ button[class ^= navbar]:hover{
     .container{
         max-width: 81vw;
     }
-    
+    .py{
+        padding: 0;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
+    
     .nav__menu{
       position: fixed;
       bottom: -100%;
@@ -1149,6 +1153,7 @@ button[class ^= navbar]:hover{
     display: grid;
     gap: 1.5rem;
   }
+  
 }
 
 /* transition and animation stopper */
@@ -1167,6 +1172,7 @@ button[class ^= navbar]:hover{
 .nav__list{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    
   }
 
 .nav__link{
@@ -1176,6 +1182,7 @@ button[class ^= navbar]:hover{
     font-size: var(--small-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
+    
   }
   
   .nav__link:hover{
